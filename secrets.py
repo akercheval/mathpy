@@ -1,4 +1,6 @@
 # Some secret recursive functions: what do they do?
+# Written by Adam Kercheval for LCRT quad literacy set, 12/1/21
+# For academic use, personal use, whatever: MIT license
 
 # Function 1:
 def f_one(n):
