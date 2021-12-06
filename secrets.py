@@ -17,7 +17,7 @@ def f_two(n):
     return (f_two(n - 1) + f_two(n - 2))
 
 # Function 3
-def f_three(n, i = 2): # i defaults to 2 if not provided
+def f_three(n, i):
     if n < 2:
         print("Invalid input")
     if n == i:
@@ -26,9 +26,14 @@ def f_three(n, i = 2): # i defaults to 2 if not provided
         return False
     return f_three(n, i + 1)
 
+# A driver for f_three, since the recursive function needs a second
+# paramter (big hint as to what it's doing!!) that I'm not willing 
+# to let the client pass in themselves
+def f_three_driver(n):
+    return f_three(n, 2)
+
 # Function 4
 def f_four(n):
     if len(n) <= 1:
         return n
-    else:
-        return (f_four(n[1:]) + n[0])
+    return (f_four(n[1:]) + n[0])
